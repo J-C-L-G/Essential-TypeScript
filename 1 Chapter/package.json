@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "start": "npm run compile && npm run execute",
     "compile": "tsc",
     "execute": "node ./dist/index.js"
   },

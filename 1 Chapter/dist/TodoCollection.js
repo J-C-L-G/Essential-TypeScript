@@ -18,6 +18,9 @@ class TodoCollection {
     getTodoById(id) {
         return this.todoMap.get(id);
     }
+    getTodoItems(showCompleted = true) {
+        return [...this.todoMap.values()].filter(({ complete }) => complete === showCompleted);
+    }
     markComplete(id, complete) {
         const todoItem = this.getTodoById(id);
         if (todoItem) {

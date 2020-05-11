@@ -21,6 +21,10 @@ export class TodoCollection {
         return this.todoMap.get(id);
     }
 
+    getTodoItems(showCompleted: boolean = true): TodoItem[] {
+        return [...this.todoMap.values()].filter( ({complete}) => complete === showCompleted);
+    }
+
     markComplete(id: number, complete: boolean): boolean {
         const todoItem = this.getTodoById(id);
         if (todoItem) {
