@@ -14,3 +14,5 @@ const reactTodo = collection.getTodoById(todoId);
 console.clear();
 console.log(`${collection.userName}'s Todo List`);
 console.log(reactTodo.printDetails());
+collection.markComplete(todoId, true);
+console.log(reactTodo.printDetails());
