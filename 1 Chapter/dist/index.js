@@ -11,8 +11,10 @@ const todos = [
 const collection = new TodoCollection_1.TodoCollection("Carlos", todos);
 const todoId = collection.addTodo("Learn React");
 const reactTodo = collection.getTodoById(todoId);
+const todoCount = collection.getItemCounts();
 console.clear();
 console.log(`${collection.userName}'s Todo List`);
+console.log(`Total Todo's: ${todoCount.total}, Pending tasks: ${todoCount.incomplete}`);
 console.log(reactTodo.printDetails());
 collection.markComplete(todoId, true);
 console.log(collection.getTodoItems(true));
