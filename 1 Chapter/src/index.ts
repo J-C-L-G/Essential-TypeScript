@@ -30,10 +30,10 @@ const promptUser = async (): Promise<object> => {
         type: "list",
         name: "command",
         message: "Choose an option",
-        choices: Object.values(Commands)
+        choices: Object.values(Commands),
     });
 
-    if (answer["command"] !== Commands.Quit) {
+    if (answer.command !== Commands.Quit) {
         return promptUser();
     } else {
         return answer;
