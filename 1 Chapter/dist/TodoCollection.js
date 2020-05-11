@@ -29,5 +29,12 @@ class TodoCollection {
         }
         return false;
     }
+    removeComplete() {
+        this.todoMap.forEach(({ id, complete }) => {
+            if (complete) {
+                this.todoMap.delete(id);
+            }
+        });
+    }
 }
 exports.TodoCollection = TodoCollection;

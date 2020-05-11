@@ -16,4 +16,6 @@ console.log(`${collection.userName}'s Todo List`);
 console.log(reactTodo.printDetails());
 collection.markComplete(todoId, true);
 console.log(collection.getTodoItems(true));
+collection.removeComplete();
+console.log(collection.getTodoItems(true));
 console.log(reactTodo.printDetails());

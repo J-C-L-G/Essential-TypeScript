@@ -22,7 +22,7 @@ export class TodoCollection {
     }
 
     getTodoItems(showCompleted: boolean = true): TodoItem[] {
-        return [...this.todoMap.values()].filter( ({complete}) => complete === showCompleted);
+        return [...this.todoMap.values()].filter(({complete}) => complete === showCompleted);
     }
 
     markComplete(id: number, complete: boolean): boolean {
@@ -32,5 +32,13 @@ export class TodoCollection {
             return true;
         }
         return false;
+    }
+
+    removeComplete() {
+        this.todoMap.forEach(({id, complete}) => {
+            if (complete) {
+                this.todoMap.delete(id);
+            }
+        });
     }
 }
