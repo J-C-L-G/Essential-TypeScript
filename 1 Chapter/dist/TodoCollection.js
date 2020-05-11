@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const TodoItem_1 = require("./TodoItem");
 class TodoCollection {
-    constructor(username, todoItems = []) {
-        this.username = username;
+    constructor(userName, todoItems = []) {
+        this.userName = userName;
         this.todoItems = todoItems;
         this.nextId = 1;
     }

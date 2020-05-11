@@ -4,7 +4,7 @@ export class TodoCollection {
 
     private nextId: number = 1;
 
-    constructor(public username: string, public todoItems: TodoItem[] = []) {
+    constructor(public userName: string, public todoItems: TodoItem[] = []) {
     }
 
     addTodo(task: string): number {
