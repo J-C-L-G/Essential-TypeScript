@@ -1,24 +1,25 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const TodoItem_1 = require("./TodoItem");
-const TodoCollection_1 = require("./TodoCollection");
+const JsonTodoCollection_1 = require("./JsonTodoCollection");
 const inquirer_1 = require("inquirer");
 var Commands;
 (function (Commands) {
     Commands["Toggle"] = "Show/Hide Completed";
-    Commands["Add"] = "Add Mew Task";
+    Commands["Add"] = "Add New Task";
     Commands["Complete"] = "Complete Task";
     Commands["Purge"] = "Remove Completed Tasks";
     Commands["Quit"] = "Quit";
 })(Commands || (Commands = {}));
-const todos = [
-    new TodoItem_1.TodoItem(1, "Learn TypeScript"),
-    new TodoItem_1.TodoItem(2, "Learn Mobx"),
-    new TodoItem_1.TodoItem(3, "Learn Loopback"),
-    new TodoItem_1.TodoItem(4, "Learn Hooks"),
-    new TodoItem_1.TodoItem(5, "Learn React", true)
+/*
+const todos: TodoItem[] = [
+    new TodoItem(1, "Learn TypeScript"),
+    new TodoItem(2, "Learn Mobx"),
+    new TodoItem(3, "Learn Loopback"),
+    new TodoItem(4, "Learn Hooks"),
+    new TodoItem(5, "Learn React", true)
 ];
-const collection = new TodoCollection_1.TodoCollection("Carlos", todos);
+*/
+const collection = new JsonTodoCollection_1.JsonTodoCollection("Carlos" /*, todos*/);
 let showCompletedTodo = false;
 const displayTodoList = (collection) => {
     const todoCount = collection.getItemCounts();

@@ -5,6 +5,7 @@ class TodoCollection {
     constructor(userName, todoItems = []) {
         this.userName = userName;
         this.nextId = 1;
+        // The protected keyword tells the TypeScript compiler that a property can be accessed only by a class or its subclasses.
         this.todoMap = new Map();
         todoItems.forEach(todo => this.todoMap.set(todo.id, todo));
     }

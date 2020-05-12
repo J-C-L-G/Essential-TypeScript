@@ -1,5 +1,6 @@
 import {TodoItem} from "./TodoItem";
 import {TodoCollection} from "./TodoCollection";
+import {JsonTodoCollection} from "./JsonTodoCollection";
 import {prompt} from "inquirer";
 
 type CommandObject = {
@@ -12,12 +13,13 @@ type UserData = {
 
 enum Commands {
     Toggle = "Show/Hide Completed",
-    Add = "Add Mew Task",
+    Add = "Add New Task",
     Complete = "Complete Task",
     Purge = "Remove Completed Tasks",
     Quit = "Quit",
 }
 
+/*
 const todos: TodoItem[] = [
     new TodoItem(1, "Learn TypeScript"),
     new TodoItem(2, "Learn Mobx"),
@@ -25,7 +27,8 @@ const todos: TodoItem[] = [
     new TodoItem(4, "Learn Hooks"),
     new TodoItem(5, "Learn React", true)
 ];
-const collection: TodoCollection = new TodoCollection("Carlos", todos);
+*/
+const collection: TodoCollection = new JsonTodoCollection("Carlos"/*, todos*/);
 let showCompletedTodo: boolean = false;
 
 const displayTodoList = (collection: TodoCollection): void => {

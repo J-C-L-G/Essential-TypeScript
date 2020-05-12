@@ -10,7 +10,8 @@ type ItemCount = {
 export class TodoCollection {
 
     private nextId: number = 1;
-    private todoMap = new Map<number, TodoItem>();
+    // The protected keyword tells the TypeScript compiler that a property can be accessed only by a class or its subclasses.
+    protected todoMap = new Map<number, TodoItem>();
 
     constructor(public userName: string, todoItems: TodoItem[] = []) {
         todoItems.forEach(todo => this.todoMap.set(todo.id, todo));
