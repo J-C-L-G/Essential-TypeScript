@@ -1,0 +1,19 @@
+{
+  "name": "6-chapter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "execute": "npx tsc-watch --onsuccess \"node dist/index.js\"",
+    "test": "npx jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
+    "tsc-watch": "^4.2.6",
+    "typescript": "^3.9.2"
+  }
+}
