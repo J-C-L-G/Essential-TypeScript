@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const TypeGuard_1 = require("./TypeGuard");
+const NeverType_1 = require("./NeverType");
 // TypeAnnotations();
 // ImplicitDefinedStatics();
 // TypeUnions();
 // TypeAssertion();
-TypeGuard_1.default();
+// TypeGuard();
+NeverType_1.default();
