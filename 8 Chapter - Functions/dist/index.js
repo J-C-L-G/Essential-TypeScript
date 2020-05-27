@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const ParameterWithDefaultValue_1 = require("./ParameterWithDefaultValue");
+const RestParameter_1 = require("./RestParameter");
 // FunctionParameters();
 // OptionalParameters();
-ParameterWithDefaultValue_1.default();
+// ParameterWithDefaultValue();
+RestParameter_1.default();
