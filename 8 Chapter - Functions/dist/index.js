@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const RestParameter_1 = require("./RestParameter");
+const TypeAnnotationsToFunctionParameters_1 = require("./TypeAnnotationsToFunctionParameters");
 // FunctionParameters();
 // OptionalParameters();
 // ParameterWithDefaultValue();
-RestParameter_1.default();
+// RestParameter();
+TypeAnnotationsToFunctionParameters_1.default();
