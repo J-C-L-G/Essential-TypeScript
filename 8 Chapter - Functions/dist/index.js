@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const TypeAnnotationsToFunctionParameters_1 = require("./TypeAnnotationsToFunctionParameters");
+const OverloadingFunctionTypes_1 = require("./OverloadingFunctionTypes");
 // FunctionParameters();
 // OptionalParameters();
 // ParameterWithDefaultValue();
 // RestParameter();
-TypeAnnotationsToFunctionParameters_1.default();
+// TypeAnnotationsToFunctionParameters();
+OverloadingFunctionTypes_1.default();
